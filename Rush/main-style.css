@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(254, 248, 232);
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+h1 {
+    text-align: center;
+    font-family: monospace;
+}
+
+.selection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
