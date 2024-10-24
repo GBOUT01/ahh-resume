@@ -3,22 +3,114 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
+    padding: 0;
+    font-size: 2vw;
 }
 
+/* Styling for the h1 element */
 h1 {
     text-align: center;
     font-family: monospace;
-    font-size: 2rem;
-    border-radius: 10px;
-    border: 2px purple solid;
-    display: inline-block;
-    padding: 5px 10px;
-    margin: 20px auto;
+    font-size: 8vw;
+    border-radius: 30px;
+    border: 0.1em solid purple;
+    padding: 0.5em 1.5em;
+    margin: 5vh auto;
     background: linear-gradient(to left, #ff7e5f, #b442be);
+    color: white;
 }
 
+/* Media query for small screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 12vw;
+        padding: 0.5em 1em;
+    }
+}
+
+/* Media query for larger screens */
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 5vw;
+        padding: 0.5em 2em;
+    }
+}
+
+/* Styling for the selection section */
 .selection {
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+/* Flexbox layout for the choose section */
+.choose {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin-top: 5vh;
+    flex-wrap: wrap; /* Wraps items on smaller screens */
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+    margin: 10px;
+}
+
+.person img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.person h2, .person a {
+    text-align: center;
+    font-size: 3vw;
+    margin: 10px 0;
+}
+
+.person a {
+    text-decoration: none;
+    color: blue;
+    font-size: 2.5vw;
+}
+
+/* Media queries for smaller screens (e.g., mobile) */
+@media (max-width: 600px) {
+    .choose {
+        flex-direction: column;
+    }
+
+    .person {
+        max-width: 150px;
+    }
+
+    .person img {
+        max-width: 150px;
+    }
+
+    .person h2, .person a {
+        font-size: 5vw;
+    }
+}
+
+/* Media queries for larger screens */
+@media (min-width: 1200px) {
+    .person {
+        max-width: 250px;
+    }
+
+    .person img {
+        max-width: 250px;
+    }
+
+    .person h2, .person a {
+        font-size: 2vw;
+    }
 }
