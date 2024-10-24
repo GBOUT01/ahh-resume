@@ -1,0 +1,44 @@
+body{
+    /* flex-direction: column; */
+    background-color: #e2f4ff;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+h1{
+    text-align: center;
+    font-family: monospace;
+    font-size: 5vw;
+    color: #f8f2e0;
+    top: -3.2vw;
+    left: 33.5vw;
+    position: fixed;
+}
+.home{
+    width: 100px;
+    height: 100px;
+    margin: 15vh 0vh 0vh 0vh; 
+}
+.about{
+    width: 100px;
+    height: 100px;
+}
+.project{
+    width: 100px;
+    height: 100px;
+}
+.contact{
+    width: 100px;
+    height: 100px;
+}
+
+.notch{
+    width: 40vw;
+    height: 20vh;
+    background-color: #004e8a;
+    border-radius: 6vh;
+    position: absolute;
+    top: -5vw;
+    z-index: -1;
+}
