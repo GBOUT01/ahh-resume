@@ -1,0 +1,119 @@
+html {
+    font-family: monospace;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px; /* Space for fixed navbar */
+}
+
+/* ----------------------nav---------------------------- */
+nav {
+    width: 100%; /* Full width for the navbar */
+    background-color: black; /* Background color for visibility */
+    position: fixed; /* Keep it fixed at the top */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    z-index: 1000; /* Ensure it stays above other content */
+    /* font-size: 3.5vw; */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-size: 3vw;
+}
+
+nav li {
+    margin: 0 5px; /* Space between items */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: block; /* Make the entire area clickable */
+}
+
+nav a:hover {
+    background-color: darkgray; /* Change background color on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* ----------------------nav---------------------------- */
+
+
+/* -----------------section1 about---------------------- */
+.about {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Two columns: image (1fr) and text (2fr) */
+    max-width: 800px;
+    gap: 20px; /* Space between image and text */
+    margin: 20px; /* Space around the section */
+    padding: 15vh 0;
+}
+
+.about-in {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Spread items evenly in the container */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 1.2em; /* Adjust font size for larger screens */
+}
+
+.about img {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto;
+    border-radius: 5px;
+}
+
+
+/* Styling the embedded GIF */
+.about-gif {
+    margin-top: 20px;
+}
+/* -----------------section1 about---------------------- */
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    #about {
+        grid-template-columns: 1fr; /* Stack image and text vertically */
+        text-align: center;
+    }
+
+    .about-in {
+        font-size: 3vw; /* Adjust font size for smaller screens */
+    }
+
+    nav ul {
+        flex-direction: row; /* Adjust navbar to row layout on small screens */
+    }
+
+    /* Hide the GIF on smaller screens */
+    .about-gif {
+        display: none;
+    }
+}
+
+@media (min-width: 601px) {
+    /* Show the GIF only on larger screens */
+    .about-gif {
+        display: block;
+    }
+
+    nav ul{
+        font-size: 18px;
+    }
+}
