@@ -1,47 +1,46 @@
+html {
+    font-family: monospace;
+}
 body {
     background-color: rgb(254, 248, 232);
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh; /* Make body take full viewport height */
     margin: 0;
     padding: 0;
-    font-size: 2vw;
+    font-size: 2vw; /* Base font size */
 }
 
 /* Styling for the h1 element */
 h1 {
     text-align: center;
-    font-family: monospace;
-    font-size: 8vw;
+    font-size: 5vw; /* Responsive font size */
     border-radius: 30px;
     border: 0.1em solid purple;
-    padding: 0.5em 1.5em;
-    margin: 5vh auto;
+    padding: 0.5em 2em; /* Adjust padding for better appearance */
+    margin: 2vh auto; /* Vertical margin */
     background: linear-gradient(to left, #ff7e5f, #b442be);
     color: white;
 }
 
-/* Media query for small screens */
-@media (max-width: 600px) {
+@media (min-width:750px){
     h1 {
-        font-size: 12vw;
-        padding: 0.5em 1em;
-    }
+        font-size: 38px;
+    }  
 }
 
-/* Media query for larger screens */
-@media (min-width: 1200px) {
-    h1 {
-        font-size: 5vw;
-        padding: 0.5em 2em;
+@media (max-width:400px){
+    h1{
+        font-size: 30px;
     }
 }
-
 /* Styling for the selection section */
 .selection {
     width: 100%;
     display: flex;
     justify-content: center;
+    flex: 0 1 auto; /* Allow flex to grow */
 }
 
 /* Flexbox layout for the choose section */
@@ -49,68 +48,36 @@ h1 {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 80%;
-    margin-top: 5vh;
+    width: 80%; /* Set a width relative to the parent */
+    margin-top: auto; /* Allow margin to push content down */
     flex-wrap: wrap; /* Wraps items on smaller screens */
+    flex: 1 1 auto; /* Allow it to take remaining space */
 }
 
 .person {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 200px;
+    max-width: 200px; /* Cap width for smaller displays */
+    flex: 1; /* Allow person divs to grow equally */
     margin: 10px;
 }
 
 .person img {
-    width: 100%;
-    max-width: 200px;
+    width: 100%; /* Full width of its container */
+    max-width: 200px; /* Cap the size for larger displays */
     border-radius: 15px;
     object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Add transition for hover effect */
 }
 
-.person h2, .person a {
+.person img:hover {
+    transform: scale(1.05); /* Scale image on hover */
+    filter: brightness(0.5); /* Slightly brighten the image on hover */
+}
+
+.person h2 {
     text-align: center;
-    font-size: 3vw;
+    font-size: 3vw; /* Responsive font size */
     margin: 10px 0;
-}
-
-.person a {
-    text-decoration: none;
-    color: blue;
-    font-size: 2.5vw;
-}
-
-/* Media queries for smaller screens (e.g., mobile) */
-@media (max-width: 600px) {
-    .choose {
-        flex-direction: column;
-    }
-
-    .person {
-        max-width: 150px;
-    }
-
-    .person img {
-        max-width: 150px;
-    }
-
-    .person h2, .person a {
-        font-size: 5vw;
-    }
-}
-
-/* Media queries for larger screens */
-@media (min-width: 1200px) {
-    .person {
-        max-width: 250px;
-    }
-
-    .person img {
-        max-width: 250px;
-    }
-
-    .person h2, .person a {
-        font-size: 2vw;
-    }
 }
