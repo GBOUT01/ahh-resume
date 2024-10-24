@@ -79,6 +79,11 @@ nav a:hover {
     border-radius: 5px;
 }
 
+.about h2 {
+    text-align: center;
+    margin: 0;
+}
+
 
 /* Styling the embedded GIF */
 .about-gif {
