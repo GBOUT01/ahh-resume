@@ -1,3 +1,4 @@
+/* Global styles */
 html {
     font-family: monospace;
 }
@@ -80,9 +81,40 @@ nav a:hover {
     margin: 0;
 }
 
-/* Correctly applying the about-gif class to the GIF container */
+/* GIF container fix */
 .about-gif {
     margin-top: 20px;
+}
+
+.about-gif iframe {
+    width: 100%;
+    height: auto; /* Ensure responsiveness */
+    max-height: 400px; /* Limit maximum height */
+}
+
+/*-------------experiences----------------*/
+.experiences {
+    padding-right: 1vw;
+}
+.experiences h2 {
+    text-align: center;
+    font-size: 3vw;
+}
+
+.experiences-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Flexible columns */
+    gap: 20px; /* Space between certificates */
+    max-width: 800px;
+    margin: 0 auto; /* Centering the grid */
+}
+
+.experiences-grid img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the images fit well */
+    border-radius: 8px; /* Add some rounding to the images */
 }
 
 /* ---------------- Responsive Styles ---------------- */
@@ -104,8 +136,16 @@ nav a:hover {
     }
 
     /* Hide the GIF on smaller screens */
-    .about-gif {
-        display: none;
+    .about-gif iframe {
+        max-width: 80%;
+    }
+
+    .experiences-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    }
+
+    .experiences h2 {
+        font-size: 5vw; /* Adjust heading size on smaller screens */
     }
 }
 
@@ -117,5 +157,9 @@ nav a:hover {
 
     nav ul {
         font-size: 18px; /* Adjust font size for larger screens */
+    }
+
+    .experiences h2 {
+        font-size: 30px;
     }
 }
