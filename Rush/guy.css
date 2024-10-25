@@ -104,7 +104,7 @@ nav a:hover {
 .experiences-grid {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Flexible columns */
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr)); /* Flexible columns */
     gap: 20px; /* Space between certificates */
     max-width: 800px;
     margin: 0 auto; /* Centering the grid */
