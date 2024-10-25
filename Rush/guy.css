@@ -115,6 +115,11 @@ nav a:hover {
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Ensure the images fit well */
     border-radius: 8px; /* Add some rounding to the images */
+    transition: transform 0.3s ease-in-out; 
+}
+
+.experiences-grid img:hover {
+    transform: scale(2); /* Slightly increase size on hover */
 }
 
 /* ---------------- Responsive Styles ---------------- */
